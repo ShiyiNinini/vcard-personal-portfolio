@@ -723,12 +723,12 @@ main {
 
 
 /**
- * #clients 
+ * #skills 
  */
 
-.clients { margin-bottom: 15px; }
+.skills { margin-bottom: 15px; }
 
-.clients-list {
+.skills-list {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -743,18 +743,18 @@ main {
   scroll-padding-inline: 25px;
 }
 
-.clients-item {
+.skills-item {
   min-width: 50%;
   scroll-snap-align: start;
 }
 
-.clients-item img {
+.skills-item img {
   width: 100%;
   filter: grayscale(1);
   transition: var(--transition-1);
 }
 
-.clients-item img:hover { filter: grayscale(0); }
+.skills-item img:hover { filter: grayscale(0); }
 
 
 
@@ -1473,14 +1473,14 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   /* clients */
 
-  .clients-list {
+  .skills-list {
     gap: 50px;
     margin: 0 -30px;
     padding: 45px;
     scroll-padding-inline: 45px;
   }
 
-  .clients-item { min-width: calc(33.33% - 35px); }
+  .skills-item { min-width: calc(33.33% - 35px); }
 
 
 
