@@ -732,9 +732,9 @@ main {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 10px;
+  gap: 5px;
   margin: 0 -15px;
-  padding: 25px;
+  padding: 20px;
   padding-bottom: 25px;
   overflow-x: auto;
   scroll-behavior: smooth;
@@ -744,13 +744,13 @@ main {
 }
 
 .skills-item {
-  min-width: 50%;
+  min-width: 20%;
   scroll-snap-align: start;
 }
 
 .skills-item img {
-  width: 120px;
-  height: 120px;
+  width: 80px;
+  height: 80px;
   filter: grayscale(1);
   transition: var(--transition-1);
 }
@@ -1475,8 +1475,8 @@ textarea.form-input::-webkit-resizer { display: none; }
   /* skills */
 
   .skills-list {
-    gap: 10px;
-    margin: 0 -30px;
+    gap: 3px;
+    margin: 0 -20px;
     padding: 45px;
     scroll-padding-inline: 45px;
   }
