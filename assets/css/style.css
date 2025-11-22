@@ -449,6 +449,51 @@ main {
 
 
 
+/*-----------------------------------*\
+  #language
+\*-----------------------------------*/
+.language-switcher {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 10;
+}
+
+.language-link {
+  background: transparent;
+  border: none;
+  color: var(--light-gray);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.lang-separator {
+  color: var(--light-gray-70);
+  font-size: 14px;
+}
+
+.language-link:hover {
+  color: var(--orange-yellow-crayola);
+  background: var(--border-gradient-onyx);
+}
+
+.language-link.active {
+  color: var(--orange-yellow-crayola);
+  font-weight: 600;
+}
+
+
+
+
 
 /*-----------------------------------*\
   #NAVBAR
@@ -1693,6 +1738,19 @@ textarea.form-input::-webkit-resizer { display: none; }
     margin: auto;
   }
 
+
+  /**
+   * LANGUAGE
+   */
+  .language-switcher {
+    top: 15px;
+    right: 15px;
+  }
+
+  .language-link {
+    font-size: 13px;
+    padding: 4px 8px;
+  }
 
 
   /**
