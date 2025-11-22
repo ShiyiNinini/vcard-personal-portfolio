@@ -67,7 +67,7 @@ select.addEventListener("click", function () { elementToggleFunc(this); });
 for (let i = 0; i < selectItems.length; i++) {
   selectItems[i].addEventListener("click", function () {
 
-    let selectedValue = this.innerText.toLowerCase();
+    let selectedValue = this.dataset.category || this.innerText.toLowerCase();
     selectValue.innerText = this.innerText;
     elementToggleFunc(select);
     filterFunc(selectedValue);
@@ -101,7 +101,7 @@ for (let i = 0; i < filterBtn.length; i++) {
 
   filterBtn[i].addEventListener("click", function () {
 
-    let selectedValue = this.innerText.toLowerCase();
+    let selectedValue = this.dataset.category || this.innerText.toLowerCase();
     selectValue.innerText = this.innerText;
     filterFunc(selectedValue);
 
@@ -138,7 +138,7 @@ for (let i = 0; i < formInputs.length; i++) {
 
 // page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
-const pages = document.querySelectorAll("[data-page]");
+const pages = document.querySelectorAll("article[data-page]");
 
 // add event to all nav link
 for (let i = 0; i < navigationLinks.length; i++) {
@@ -147,14 +147,20 @@ for (let i = 0; i < navigationLinks.length; i++) {
     // Use data-page attribute if available, otherwise fallback to innerHTML
     const targetPage = this.dataset.page || this.innerHTML.toLowerCase();
 
-    for (let i = 0; i < pages.length; i++) {
-      if (targetPage === pages[i].dataset.page) {
-        pages[i].classList.add("active");
-        navigationLinks[i].classList.add("active");
+    // Remove active from all nav links
+    for (let j = 0; j < navigationLinks.length; j++) {
+      navigationLinks[j].classList.remove("active");
+    }
+    // Add active to clicked nav link
+    this.classList.add("active");
+
+    // Toggle pages
+    for (let j = 0; j < pages.length; j++) {
+      if (targetPage === pages[j].dataset.page) {
+        pages[j].classList.add("active");
         window.scrollTo(0, 0);
       } else {
-        pages[i].classList.remove("active");
-        navigationLinks[i].classList.remove("active");
+        pages[j].classList.remove("active");
       }
     }
 
